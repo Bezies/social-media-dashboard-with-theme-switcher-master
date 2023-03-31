@@ -1,0 +1,482 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(230, 17%, 14%);
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* HEADER  */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: 30px auto;
+}
+
+.social-head h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.social-head p {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.dark-mode {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode p {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+
+
+/* HEADER TOGGLE  */
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 23px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.switch input {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 0;
+    height: 0;
+}
+
+.switch input+span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0.25turn, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border-radius: 20px;
+}
+
+.switch input:checked+span {
+    background: hsl(230, 22%, 74%);
+}
+
+.switch input+span:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background: hsl(232, 19%, 15%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.switch input:checked+span:before {
+    left: 23px;
+}
+
+
+
+/* MAIN  */
+
+main {
+    width: 100%;
+    height: 90%;
+}
+
+
+
+
+
+/* LINE BOX COLOR  */
+
+#facebook::before {
+    content: '';
+    background-color: hsl(208, 92%, 53%);
+    height: 4px;
+    position: relative;
+    top: -24px;
+    border-radius: 5px 5px 0 0;
+}
+
+#twitter::before {
+    content: '';
+    background-color: hsl(203, 89%, 53%);
+    height: 4px;
+    position: relative;
+    top: -24px;
+    border-radius: 5px 5px 0 0;
+}
+
+#instagram::before {
+    content: '';
+    background: linear-gradient(0.25turn, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 4px;
+    position: relative;
+    top: -24px;
+    border-radius: 5px 5px 0 0;
+}
+
+#youtube::before {
+    content: '';
+    background-color: hsl(348, 97%, 39%);
+    height: 4px;
+    position: relative;
+    top: -24px;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+
+
+
+/* SOCIAL BOX  */
+
+
+.social-box {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    grid-template-rows: 250px;
+    width: 75%;
+    margin: 10px auto;
+}
+
+.rs-box {
+    width: 100%;
+    height: 250px;
+    background-color: hsl(228, 28%, 20%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.rs-box:hover, .overview-box:hover  {
+    background-color: hsla(228, 26%, 27%, 1);
+}
+
+.pseudo {
+    color: hsl(228, 34%, 66%);
+    padding: 5px 0 5px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pseudo img {
+    margin-right: 10px;
+}
+
+
+
+.rs-box span {
+    color: hsl(0, 0%, 100%);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.followers {
+    color: hsl(228, 34%, 66%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.today {
+    color: hsl(163, 72%, 41%);
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 10px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#facebook-today {
+    content: '';
+    background-image: url(images/icon-up.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 10px 5px;
+    width: 70px;
+    height: 10px;
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+#twitter-today {
+    content: '';
+    background-image: url(images/icon-up.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 10px 5px;
+    width: 70px;
+    height: 10px;
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+#instagram-today {
+    content: '';
+    background-image: url(images/icon-up.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 4px 5px;
+    width: 70px;
+    height: 10px;
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+
+#youtube-today {
+    content: '';
+    background-image: url(images/icon-down.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 4px 5px;
+    width: 70px;
+    height: 10px;
+    color: hsl(356, 69%, 56%);
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+/* OVERVIEW  */
+
+h2 {
+    color: white;
+    width: 75%;
+    margin: 20px auto;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.overview {
+    width: 75%;
+    margin: 10px auto;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    grid-template-rows: repeat(2, 100px);
+    row-gap: 20px;
+}
+
+.overview-box {
+    width: 100%;
+    height: 100px;
+    background-color: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(2, 50px);
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.overview-box img {
+    margin: 0 auto;
+    display: block;
+}
+
+.overview-type {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.stats {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.progress {
+    font-size: 11px;
+    color: hsl(163, 72%, 41%);
+    font-weight: 700;
+    content: '';
+    background-image: url(images/icon-up.svg);
+    background-repeat: no-repeat;
+    background-size: 8px;
+    background-position: 35px 5px;
+    height: 10px;
+    display: block;
+}
+
+#facebook-progress {
+    background-position: 42px 5px;
+}
+
+.progress-down {
+    font-size: 11px;
+    color: hsl(356, 69%, 56%);
+    font-weight: 700;
+    content: '';
+    background-image: url(images/icon-down.svg);
+    background-repeat: no-repeat;
+    background-size: 8px;
+    background-position: 40px 5px;
+    height: 10px;
+    display: block;
+}
+
+
+
+
+
+/* FOOTER  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: hsl(163, 72%, 41%);
+}
+
+
+
+
+
+
+
+
+
+/* LIGHT THEME */
+
+
+
+
+.body-light {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.body-light h1 {
+    color: hsl(230, 17%, 14%);
+}
+
+.body-light .switch input+span:hover {
+    background: linear-gradient(0.25turn, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.body-light .rs-box,
+.body-light .overview-box {
+    background-color: hsl(227, 47%, 96%);
+}
+
+.body-light .rs-box:hover, .body-light .overview-box:hover {
+    background-color: hsla(232, 33%, 91%, 1);
+}
+
+
+.body-light .rs-box span,
+.body-light .stats {
+    color: hsl(230, 17%, 14%);
+}
+
+/* FOOTER  */
+.body-light .attribution {
+    color: black;
+}
+
+.body-light .attribution a {
+    color: blue;
+}
+
+
+
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width: 800px) {
+
+    body {
+        height: 100%;
+    }
+
+    .social-box {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 20px;
+        grid-template-rows: repeat(2, 250px);
+    }
+
+    
+
+    .overview {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        grid-template-rows: repeat(4, 100px);
+        row-gap: 20px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .social-box {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        grid-template-rows: repeat(4, 250px);
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+        grid-template-rows: repeat(8, 100px);
+        row-gap: 20px;
+    }
+}
